@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE065066233EB1ED00166FCA /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE065065233EB1ED00166FCA /* CardView.swift */; };
 		CE82693923390BED001A7CA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82693823390BED001A7CA9 /* AppDelegate.swift */; };
 		CE82693B23390BED001A7CA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82693A23390BED001A7CA9 /* SceneDelegate.swift */; };
 		CE82693D23390BED001A7CA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82693C23390BED001A7CA9 /* ViewController.swift */; };
 		CE82694023390BED001A7CA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE82693E23390BED001A7CA9 /* Main.storyboard */; };
 		CE82694223390BEE001A7CA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE82694123390BEE001A7CA9 /* Assets.xcassets */; };
 		CE82694523390BEE001A7CA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE82694323390BEE001A7CA9 /* LaunchScreen.storyboard */; };
+		CE82694D233B891B001A7CA9 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82694C233B891B001A7CA9 /* TransactionTableViewCell.swift */; };
+		CEA72C0F23400D460053635D /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA72C0E23400D460053635D /* CardTableViewCell.swift */; };
+		CEA72C11234031660053635D /* Withdrawal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA72C10234031660053635D /* Withdrawal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE065065233EB1ED00166FCA /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		CE82693523390BED001A7CA9 /* Atmapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Atmapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE82693823390BED001A7CA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE82693A23390BED001A7CA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,9 @@
 		CE82694123390BEE001A7CA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE82694423390BEE001A7CA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE82694623390BEE001A7CA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE82694C233B891B001A7CA9 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		CEA72C0E23400D460053635D /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
+		CEA72C10234031660053635D /* Withdrawal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Withdrawal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,10 @@
 				CE82693823390BED001A7CA9 /* AppDelegate.swift */,
 				CE82693A23390BED001A7CA9 /* SceneDelegate.swift */,
 				CE82693C23390BED001A7CA9 /* ViewController.swift */,
+				CE065065233EB1ED00166FCA /* CardView.swift */,
+				CE82694C233B891B001A7CA9 /* TransactionTableViewCell.swift */,
+				CEA72C0E23400D460053635D /* CardTableViewCell.swift */,
+				CEA72C10234031660053635D /* Withdrawal.swift */,
 				CE82693E23390BED001A7CA9 /* Main.storyboard */,
 				CE82694123390BEE001A7CA9 /* Assets.xcassets */,
 				CE82694323390BEE001A7CA9 /* LaunchScreen.storyboard */,
@@ -139,8 +151,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE82693D23390BED001A7CA9 /* ViewController.swift in Sources */,
+				CEA72C0F23400D460053635D /* CardTableViewCell.swift in Sources */,
 				CE82693923390BED001A7CA9 /* AppDelegate.swift in Sources */,
+				CE82694D233B891B001A7CA9 /* TransactionTableViewCell.swift in Sources */,
 				CE82693B23390BED001A7CA9 /* SceneDelegate.swift in Sources */,
+				CE065066233EB1ED00166FCA /* CardView.swift in Sources */,
+				CEA72C11234031660053635D /* Withdrawal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +307,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.user.Atmapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oluwatobi.Atmapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -309,7 +325,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.user.Atmapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oluwatobi.Atmapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

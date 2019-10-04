@@ -22,13 +22,14 @@ class Withdrawal: UIViewController {
     @IBOutlet weak var pinFourTextField: UITextField!
     @IBOutlet weak var pinThreeTextField: UITextField!
     @IBOutlet weak var pinTwoTextField: UITextField!
-    
-    var pin = "1111"
-    var remainingAttempts = 3
-    
+
+
+   
     var userEnteredPin: String?
-    let moneyDenomination = ["1000","2000","5000","10000","15000","20000","25000","30000","35000", "40000"]
-    let balance = 56379
+    let pin = "1111"
+    var remainingAttempts = 3
+    let moneyDenomination = MoneyDenomination.moneyDenomination
+    let balance = 56379.01
     var selectedAmount: String?
     
     override func viewDidLoad() {
@@ -80,28 +81,35 @@ class Withdrawal: UIViewController {
     }
     
     private func voidexecuteLogin() {
-        
+
         userEnteredPin = pinOneTextField.text! + pinTwoTextField.text! + pinThreeTextField.text! + pinFourTextField.text!
+             let amount = Double(enterAmount.text!)
              if  Int((enterAmount.text)!) == nil {
                   displayMyAlertMessage(userMessage: "Enter Amount you want to withdrawal")
              }else{
                  if (remainingAttempts != 0){
-                      if pin == userEnteredPin && Int(enterAmount.text!)! <= balance {
-                           print(userEnteredPin!)
+                      if pin == userEnteredPin && amount! <= balance {
+                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Verified") as! Verified
+                        self.show(nextViewController, sender: self)
+                      
                      }else{
                          var msg = " "
-                         remainingAttempts  = remainingAttempts - 1
-
-                         if Int(enterAmount.text!)! > balance {
+                        
+                        if amount! > balance {
                              displayMyAlertMessage(userMessage: "The Amount entered have exceeded the balance")
                          }
                         else if (remainingAttempts > 0){
                              msg = "\(remainingAttempts) attempts left."
                              displayMyAlertMessage(userMessage: "Pin do not match " + msg);
+                             remainingAttempts  = remainingAttempts - 1
                          }
                      }
                  }else{
-                     displayMyAlertMessage(userMessage: "Your Card Have been permanently retained, please contact your bank");
+                     displayMyAlertMessage(userMessage: "Your Card Have been permanently retained, please contact your bank")
+                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "card") as! CardView
+                                    self.show(nextViewController, sender: self)
                  }
 
              

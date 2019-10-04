@@ -8,17 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class Home: UIViewController {
 
     @IBOutlet weak var transactionHistoryView: UIView!
     @IBOutlet weak var transactionTableView: UITableView!
     @IBOutlet weak var balanceView: UIView!
     let cellSpacingHeight: CGFloat = 30
-    
-    let transactionNames = ["Withdrawal", "SMS Alert Fee", "Credit","Credit","Withdrawal","SMS Alert Fee","Withdrawal","SMS Alert Fee"]
-    let transactionLocation = ["Unilag Branch ATM","0000013923413456","MR FOLA AGORO","USMAN UCHENNA.O","IDUMOTA BRANCH ATM","0000013923413452","0000013923413456","0000013923413489"]
-    let transactionAmount = ["-20,052","-8.00","+100,000","+20,000","+20,000","-8.00","-8.00","-8.00"]
-    let transactionTime = ["1:52AM","2:00AM","5:47PM","2:00PM","12:00PM","11:00AM","1:45PM","4:00PM"]
+    let names = TransactionDetails.transactionNames
+    let Locations =  TransactionDetails.transactionLocation
+    let  Amounts = TransactionDetails.transactionAmount
+    let  Times   = TransactionDetails.transactionTime
+     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController:  UITableViewDataSource, UITableViewDelegate {
+extension Home:  UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return cellSpacingHeight
@@ -58,17 +58,16 @@ extension ViewController:  UITableViewDataSource, UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-       return transactionNames.count
-       //return transactionLocation.count
+       return names.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "transaction")! as? TransactionTableViewCell
         
-        let name = transactionNames[indexPath.row]
-        let location = transactionLocation[indexPath.row]
-        let amount = transactionAmount[indexPath.row]
-        let time = transactionTime[indexPath.row]
+        let name = names[indexPath.row]
+        let location = Locations[indexPath.row]
+        let amount = Amounts[indexPath.row]
+        let time = Times[indexPath.row]
         cell?.transactionName.text = name
         cell?.transactionLocation.text = location
         cell?.transactionAmount.text = amount

@@ -8,9 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		CE065066233EB1ED00166FCA /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE065065233EB1ED00166FCA /* CardView.swift */; };
+		CE2771BC2344B3F1007170D3 /* Verified.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2771BB2344B3F1007170D3 /* Verified.swift */; };
+		CE61CEBB23460F5400A075B9 /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61CEBA23460F5400A075B9 /* Support.swift */; };
+		CE61CEBD234610AE00A075B9 /* SupportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61CEBC234610AE00A075B9 /* SupportTableViewCell.swift */; };
+		CE61CEC0234690E100A075B9 /* TransactionDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61CEBF234690E100A075B9 /* TransactionDetails.swift */; };
+		CE61CEC4234695A600A075B9 /* CardDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61CEC3234695A600A075B9 /* CardDetails.swift */; };
+		CE61CEC6234776BD00A075B9 /* MoneyDenomination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61CEC5234776BD00A075B9 /* MoneyDenomination.swift */; };
+		CE61CEC823478C0400A075B9 /* SupportList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61CEC723478C0400A075B9 /* SupportList.swift */; };
 		CE82693923390BED001A7CA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82693823390BED001A7CA9 /* AppDelegate.swift */; };
 		CE82693B23390BED001A7CA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82693A23390BED001A7CA9 /* SceneDelegate.swift */; };
-		CE82693D23390BED001A7CA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82693C23390BED001A7CA9 /* ViewController.swift */; };
+		CE82693D23390BED001A7CA9 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82693C23390BED001A7CA9 /* Home.swift */; };
 		CE82694023390BED001A7CA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE82693E23390BED001A7CA9 /* Main.storyboard */; };
 		CE82694223390BEE001A7CA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE82694123390BEE001A7CA9 /* Assets.xcassets */; };
 		CE82694523390BEE001A7CA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE82694323390BEE001A7CA9 /* LaunchScreen.storyboard */; };
@@ -21,10 +28,17 @@
 
 /* Begin PBXFileReference section */
 		CE065065233EB1ED00166FCA /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		CE2771BB2344B3F1007170D3 /* Verified.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verified.swift; sourceTree = "<group>"; };
+		CE61CEBA23460F5400A075B9 /* Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
+		CE61CEBC234610AE00A075B9 /* SupportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportTableViewCell.swift; sourceTree = "<group>"; };
+		CE61CEBF234690E100A075B9 /* TransactionDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetails.swift; sourceTree = "<group>"; };
+		CE61CEC3234695A600A075B9 /* CardDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetails.swift; sourceTree = "<group>"; };
+		CE61CEC5234776BD00A075B9 /* MoneyDenomination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyDenomination.swift; sourceTree = "<group>"; };
+		CE61CEC723478C0400A075B9 /* SupportList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportList.swift; sourceTree = "<group>"; };
 		CE82693523390BED001A7CA9 /* Atmapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Atmapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE82693823390BED001A7CA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE82693A23390BED001A7CA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE82693C23390BED001A7CA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE82693C23390BED001A7CA9 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		CE82693F23390BED001A7CA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE82694123390BEE001A7CA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE82694423390BEE001A7CA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -45,6 +59,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE61CEB8234604D800A075B9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CE82693C23390BED001A7CA9 /* Home.swift */,
+				CE065065233EB1ED00166FCA /* CardView.swift */,
+				CEA72C10234031660053635D /* Withdrawal.swift */,
+				CE2771BB2344B3F1007170D3 /* Verified.swift */,
+				CE61CEBA23460F5400A075B9 /* Support.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CE61CEB92346050300A075B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE82694C233B891B001A7CA9 /* TransactionTableViewCell.swift */,
+				CEA72C0E23400D460053635D /* CardTableViewCell.swift */,
+				CE61CEBC234610AE00A075B9 /* SupportTableViewCell.swift */,
+				CE82693E23390BED001A7CA9 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE61CEBE2346906900A075B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE61CEBF234690E100A075B9 /* TransactionDetails.swift */,
+				CE61CEC3234695A600A075B9 /* CardDetails.swift */,
+				CE61CEC5234776BD00A075B9 /* MoneyDenomination.swift */,
+				CE61CEC723478C0400A075B9 /* SupportList.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		CE82692C23390BED001A7CA9 = {
 			isa = PBXGroup;
 			children = (
@@ -66,12 +114,9 @@
 			children = (
 				CE82693823390BED001A7CA9 /* AppDelegate.swift */,
 				CE82693A23390BED001A7CA9 /* SceneDelegate.swift */,
-				CE82693C23390BED001A7CA9 /* ViewController.swift */,
-				CE065065233EB1ED00166FCA /* CardView.swift */,
-				CE82694C233B891B001A7CA9 /* TransactionTableViewCell.swift */,
-				CEA72C0E23400D460053635D /* CardTableViewCell.swift */,
-				CEA72C10234031660053635D /* Withdrawal.swift */,
-				CE82693E23390BED001A7CA9 /* Main.storyboard */,
+				CE61CEBE2346906900A075B9 /* Model */,
+				CE61CEB8234604D800A075B9 /* Presenter */,
+				CE61CEB92346050300A075B9 /* View */,
 				CE82694123390BEE001A7CA9 /* Assets.xcassets */,
 				CE82694323390BEE001A7CA9 /* LaunchScreen.storyboard */,
 				CE82694623390BEE001A7CA9 /* Info.plist */,
@@ -150,13 +195,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE82693D23390BED001A7CA9 /* ViewController.swift in Sources */,
+				CE82693D23390BED001A7CA9 /* Home.swift in Sources */,
+				CE61CEC0234690E100A075B9 /* TransactionDetails.swift in Sources */,
+				CE61CEC6234776BD00A075B9 /* MoneyDenomination.swift in Sources */,
 				CEA72C0F23400D460053635D /* CardTableViewCell.swift in Sources */,
 				CE82693923390BED001A7CA9 /* AppDelegate.swift in Sources */,
+				CE61CEC823478C0400A075B9 /* SupportList.swift in Sources */,
+				CE61CEC4234695A600A075B9 /* CardDetails.swift in Sources */,
+				CE61CEBD234610AE00A075B9 /* SupportTableViewCell.swift in Sources */,
 				CE82694D233B891B001A7CA9 /* TransactionTableViewCell.swift in Sources */,
 				CE82693B23390BED001A7CA9 /* SceneDelegate.swift in Sources */,
 				CE065066233EB1ED00166FCA /* CardView.swift in Sources */,
 				CEA72C11234031660053635D /* Withdrawal.swift in Sources */,
+				CE2771BC2344B3F1007170D3 /* Verified.swift in Sources */,
+				CE61CEBB23460F5400A075B9 /* Support.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

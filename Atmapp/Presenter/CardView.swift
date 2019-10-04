@@ -13,8 +13,7 @@ class CardView:  UIViewController{
     
     @IBOutlet weak var selectionTableView: UITableView!
     @IBOutlet weak var cardView: UIView!
-        let settingsNames = ["   ATM Withdrawal", "   Reset Pin Code", "   Online Payment","   Freeze Card","   Contactless Payment"]
-    let settingsImage = [ #imageLiteral(resourceName: "icons8-collapse-arrow-96") ,#imageLiteral(resourceName: "icons8-collapse-arrow-96"),#imageLiteral(resourceName: "icons8-toggle-off-80"),#imageLiteral(resourceName: "icons8-toggle-off-80"),#imageLiteral(resourceName: "icons8-toggle-off-80")] as [Any]
+    let Names = CardDetails.settingsNames
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -35,7 +34,7 @@ extension CardView: UITableViewDataSource, UITableViewDelegate{
     
   
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return settingsNames.count
+        return Names.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -43,7 +42,7 @@ extension CardView: UITableViewDataSource, UITableViewDelegate{
         let switchObj = UISwitch(frame: CGRect(x: 1, y: 1, width: 20, height: 20))
             switchObj.isOn = false
         switchObj.addTarget(self, action: #selector(toggle(_:)), for: .valueChanged)
-        cell?.settingsLabel.text = settingsNames[indexPath.row]
+        cell?.settingsLabel.text = Names[indexPath.row]
         if indexPath.row == 0 {
             cell?.accessoryType = .disclosureIndicator
         }
@@ -61,7 +60,6 @@ extension CardView: UITableViewDataSource, UITableViewDelegate{
         if indexPath.row == 4 {
             cell?.accessoryView = switchObj
         }
-        //cell?.settingsImages.image = (settingsImage[indexPath.row] as! UIImage)
         
         return cell!
     }

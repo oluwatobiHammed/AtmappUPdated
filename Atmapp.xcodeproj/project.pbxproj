@@ -15,6 +15,7 @@
 		CE61CEC4234695A600A075B9 /* CardDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61CEC3234695A600A075B9 /* CardDetails.swift */; };
 		CE61CEC6234776BD00A075B9 /* MoneyDenomination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61CEC5234776BD00A075B9 /* MoneyDenomination.swift */; };
 		CE61CEC823478C0400A075B9 /* SupportList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61CEC723478C0400A075B9 /* SupportList.swift */; };
+		CE61CED02349018300A075B9 /* AtmappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61CECF2349018300A075B9 /* AtmappTests.swift */; };
 		CE82693923390BED001A7CA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82693823390BED001A7CA9 /* AppDelegate.swift */; };
 		CE82693B23390BED001A7CA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82693A23390BED001A7CA9 /* SceneDelegate.swift */; };
 		CE82693D23390BED001A7CA9 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82693C23390BED001A7CA9 /* Home.swift */; };
@@ -24,7 +25,25 @@
 		CE82694D233B891B001A7CA9 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82694C233B891B001A7CA9 /* TransactionTableViewCell.swift */; };
 		CEA72C0F23400D460053635D /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA72C0E23400D460053635D /* CardTableViewCell.swift */; };
 		CEA72C11234031660053635D /* Withdrawal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA72C10234031660053635D /* Withdrawal.swift */; };
+		CECF8E71234A06E2005BC23C /* AtmappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF8E70234A06E2005BC23C /* AtmappUITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE61CED22349018300A075B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE82692D23390BED001A7CA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE82693423390BED001A7CA9;
+			remoteInfo = Atmapp;
+		};
+		CECF8E73234A06E2005BC23C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE82692D23390BED001A7CA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE82693423390BED001A7CA9;
+			remoteInfo = Atmapp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CE065065233EB1ED00166FCA /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -35,6 +54,9 @@
 		CE61CEC3234695A600A075B9 /* CardDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetails.swift; sourceTree = "<group>"; };
 		CE61CEC5234776BD00A075B9 /* MoneyDenomination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyDenomination.swift; sourceTree = "<group>"; };
 		CE61CEC723478C0400A075B9 /* SupportList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportList.swift; sourceTree = "<group>"; };
+		CE61CECD2349018300A075B9 /* AtmappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtmappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE61CECF2349018300A075B9 /* AtmappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtmappTests.swift; sourceTree = "<group>"; };
+		CE61CED12349018300A075B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE82693523390BED001A7CA9 /* Atmapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Atmapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE82693823390BED001A7CA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE82693A23390BED001A7CA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,10 +68,27 @@
 		CE82694C233B891B001A7CA9 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		CEA72C0E23400D460053635D /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		CEA72C10234031660053635D /* Withdrawal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Withdrawal.swift; sourceTree = "<group>"; };
+		CECF8E6E234A06E2005BC23C /* AtmappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtmappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CECF8E70234A06E2005BC23C /* AtmappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtmappUITests.swift; sourceTree = "<group>"; };
+		CECF8E72234A06E2005BC23C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CE61CECA2349018200A075B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE82693223390BED001A7CA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECF8E6B234A06E2005BC23C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -93,10 +132,21 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		CE61CECE2349018300A075B9 /* AtmappTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE61CECF2349018300A075B9 /* AtmappTests.swift */,
+				CE61CED12349018300A075B9 /* Info.plist */,
+			);
+			path = AtmappTests;
+			sourceTree = "<group>";
+		};
 		CE82692C23390BED001A7CA9 = {
 			isa = PBXGroup;
 			children = (
 				CE82693723390BED001A7CA9 /* Atmapp */,
+				CE61CECE2349018300A075B9 /* AtmappTests */,
+				CECF8E6F234A06E2005BC23C /* AtmappUITests */,
 				CE82693623390BED001A7CA9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				CE82693523390BED001A7CA9 /* Atmapp.app */,
+				CE61CECD2349018300A075B9 /* AtmappTests.xctest */,
+				CECF8E6E234A06E2005BC23C /* AtmappUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,9 +176,36 @@
 			path = Atmapp;
 			sourceTree = "<group>";
 		};
+		CECF8E6F234A06E2005BC23C /* AtmappUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CECF8E70234A06E2005BC23C /* AtmappUITests.swift */,
+				CECF8E72234A06E2005BC23C /* Info.plist */,
+			);
+			path = AtmappUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CE61CECC2349018200A075B9 /* AtmappTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE61CED42349018300A075B9 /* Build configuration list for PBXNativeTarget "AtmappTests" */;
+			buildPhases = (
+				CE61CEC92349018200A075B9 /* Sources */,
+				CE61CECA2349018200A075B9 /* Frameworks */,
+				CE61CECB2349018200A075B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE61CED32349018300A075B9 /* PBXTargetDependency */,
+			);
+			name = AtmappTests;
+			productName = AtmappTests;
+			productReference = CE61CECD2349018300A075B9 /* AtmappTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CE82693423390BED001A7CA9 /* Atmapp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE82694923390BEE001A7CA9 /* Build configuration list for PBXNativeTarget "Atmapp" */;
@@ -144,6 +223,24 @@
 			productReference = CE82693523390BED001A7CA9 /* Atmapp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CECF8E6D234A06E2005BC23C /* AtmappUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CECF8E75234A06E2005BC23C /* Build configuration list for PBXNativeTarget "AtmappUITests" */;
+			buildPhases = (
+				CECF8E6A234A06E2005BC23C /* Sources */,
+				CECF8E6B234A06E2005BC23C /* Frameworks */,
+				CECF8E6C234A06E2005BC23C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CECF8E74234A06E2005BC23C /* PBXTargetDependency */,
+			);
+			name = AtmappUITests;
+			productName = AtmappUITests;
+			productReference = CECF8E6E234A06E2005BC23C /* AtmappUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -154,8 +251,16 @@
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Oladipupo Oluwatobi";
 				TargetAttributes = {
+					CE61CECC2349018200A075B9 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = CE82693423390BED001A7CA9;
+					};
 					CE82693423390BED001A7CA9 = {
 						CreatedOnToolsVersion = 11.0;
+					};
+					CECF8E6D234A06E2005BC23C = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = CE82693423390BED001A7CA9;
 					};
 				};
 			};
@@ -173,11 +278,20 @@
 			projectRoot = "";
 			targets = (
 				CE82693423390BED001A7CA9 /* Atmapp */,
+				CE61CECC2349018200A075B9 /* AtmappTests */,
+				CECF8E6D234A06E2005BC23C /* AtmappUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CE61CECB2349018200A075B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE82693323390BED001A7CA9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -188,9 +302,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CECF8E6C234A06E2005BC23C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CE61CEC92349018200A075B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE61CED02349018300A075B9 /* AtmappTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE82693123390BED001A7CA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -212,7 +341,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CECF8E6A234A06E2005BC23C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECF8E71234A06E2005BC23C /* AtmappUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE61CED32349018300A075B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE82693423390BED001A7CA9 /* Atmapp */;
+			targetProxy = CE61CED22349018300A075B9 /* PBXContainerItemProxy */;
+		};
+		CECF8E74234A06E2005BC23C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE82693423390BED001A7CA9 /* Atmapp */;
+			targetProxy = CECF8E73234A06E2005BC23C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CE82693E23390BED001A7CA9 /* Main.storyboard */ = {
@@ -234,6 +384,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CE61CED52349018300A075B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3K5BT8EBBM;
+				INFOPLIST_FILE = AtmappTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.user.AtmappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Atmapp.app/Atmapp";
+			};
+			name = Debug;
+		};
+		CE61CED62349018300A075B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3K5BT8EBBM;
+				INFOPLIST_FILE = AtmappTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.user.AtmappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Atmapp.app/Atmapp";
+			};
+			name = Release;
+		};
 		CE82694723390BEE001A7CA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -384,9 +574,56 @@
 			};
 			name = Release;
 		};
+		CECF8E76234A06E2005BC23C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3K5BT8EBBM;
+				INFOPLIST_FILE = AtmappUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.user.AtmappUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Atmapp;
+			};
+			name = Debug;
+		};
+		CECF8E77234A06E2005BC23C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3K5BT8EBBM;
+				INFOPLIST_FILE = AtmappUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.user.AtmappUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Atmapp;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CE61CED42349018300A075B9 /* Build configuration list for PBXNativeTarget "AtmappTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE61CED52349018300A075B9 /* Debug */,
+				CE61CED62349018300A075B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CE82693023390BED001A7CA9 /* Build configuration list for PBXProject "Atmapp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -401,6 +638,15 @@
 			buildConfigurations = (
 				CE82694A23390BEE001A7CA9 /* Debug */,
 				CE82694B23390BEE001A7CA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CECF8E75234A06E2005BC23C /* Build configuration list for PBXNativeTarget "AtmappUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CECF8E76234A06E2005BC23C /* Debug */,
+				CECF8E77234A06E2005BC23C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

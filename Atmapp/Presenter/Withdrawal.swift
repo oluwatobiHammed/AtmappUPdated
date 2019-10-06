@@ -81,39 +81,43 @@ class Withdrawal: UIViewController {
     }
     
     private func voidexecuteLogin() {
-
+        
         userEnteredPin = pinOneTextField.text! + pinTwoTextField.text! + pinThreeTextField.text! + pinFourTextField.text!
-             let amount = Double(enterAmount.text!)
-             if  Int((enterAmount.text)!) == nil {
-                  displayMyAlertMessage(userMessage: "Enter Amount you want to withdrawal")
-             }else{
-                 if (remainingAttempts != 0){
-                      if pin == userEnteredPin && amount! <= balance {
-                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Verified") as! Verified
-                        self.show(nextViewController, sender: self)
-                      
-                     }else{
-                         var msg = " "
-                        
-                        if amount! > balance {
-                             displayMyAlertMessage(userMessage: "The Amount entered have exceeded the balance")
-                         }
-                        else if (remainingAttempts > 0){
-                             msg = "\(remainingAttempts) attempts left."
-                             displayMyAlertMessage(userMessage: "Pin do not match " + msg);
-                             remainingAttempts  = remainingAttempts - 1
-                         }
-                     }
-                 }else{
-                     displayMyAlertMessage(userMessage: "Your Card Have been permanently retained, please contact your bank")
-                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "card") as! CardView
-                                    self.show(nextViewController, sender: self)
-                 }
+        if pinFourTextField.text?.utf16.count == 1{
+            
+            let amount = Double(enterAmount.text!)
+                if  amount == nil {
+                     displayMyAlertMessage(userMessage: "Enter Amount you want to withdrawal")
+                }else{
+                    if (remainingAttempts != 0){
+                         if pin == userEnteredPin && amount! <= balance {
+                           let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                           let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Verified") as! Verified
+                           self.show(nextViewController, sender: self)
+                         
+                        }else{
+                            var msg = " "
+                           
+                           if amount! > balance {
+                                displayMyAlertMessage(userMessage: "The Amount entered have exceeded the balance")
+                            }
+                           else if (remainingAttempts > 0){
+                                msg = "\(remainingAttempts) attempts left."
+                                displayMyAlertMessage(userMessage: "Pin do not match " + msg);
+                                remainingAttempts  = remainingAttempts - 1
+                            }
+                        }
+                    }else{
+                        displayMyAlertMessage(userMessage: "Your Card Have been permanently retained, please contact your bank")
+                       let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                       let nextViewController = storyBoard.instantiateViewController(withIdentifier: "card") as! CardView
+                                       self.show(nextViewController, sender: self)
+                    }
 
+                
+            }
+        }
              
-         }
         
     }
     @objc func dissmissKeyBoard() {
@@ -123,7 +127,7 @@ class Withdrawal: UIViewController {
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= (keyboardSize.height - 140)
+                self.view.frame.origin.y -= (keyboardSize.height - 170)
             }
         }
     }
@@ -195,20 +199,22 @@ extension Withdrawal: UITextFieldDelegate {
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        
+          verifyButton.becomeFirstResponder()
         let text = textField.text
-        if text?.utf16.count == 1{
+        if text?.utf16.count == 1 {
+          
             switch textField {
             case pinOneTextField:
-                pinTwoTextField.becomeFirstResponder()
+                 pinTwoTextField.becomeFirstResponder()
             case pinTwoTextField:
                 pinThreeTextField.becomeFirstResponder()
             case pinThreeTextField:
                 pinFourTextField.becomeFirstResponder()
             case pinFourTextField:
                 pinFourTextField.becomeFirstResponder()
+               
             default:
-                break
+               break
             }
         }
         

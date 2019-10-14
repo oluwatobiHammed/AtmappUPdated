@@ -17,6 +17,8 @@ class Verified: UIViewController {
     @IBOutlet weak var successMessageLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.hidesBackButton = true
         verfiedImages.image = #imageLiteral(resourceName: "icons8-checkmark-64")
         successLabel.textColor = UIColor.black
         successLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 18)
@@ -27,13 +29,13 @@ class Verified: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
+        //navigationController?.setNavigationBarHidden(true, animated: animated)
          self.tabBarController?.tabBar.isHidden = true
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
+     
          self.tabBarController?.tabBar.isHidden = false
     }
     

@@ -14,10 +14,7 @@ class Home: UIViewController {
     @IBOutlet weak var transactionTableView: UITableView!
     @IBOutlet weak var balanceView: UIView!
     let cellSpacingHeight: CGFloat = 30
-    let names = TransactionDetails.transactionNames
-    let Locations =  TransactionDetails.transactionLocation
-    let  Amounts = TransactionDetails.transactionAmount
-    let  Times   = TransactionDetails.transactionTime
+    let transactions = TransactionDetails.transaction
      
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,20 +55,18 @@ extension Home:  UITableViewDataSource, UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-       return names.count
+       return transactions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "transaction")! as? TransactionTableViewCell
         
-        let name = names[indexPath.row]
-        let location = Locations[indexPath.row]
-        let amount = Amounts[indexPath.row]
-        let time = Times[indexPath.row]
-        cell?.transactionName.text = name
-        cell?.transactionLocation.text = location
-        cell?.transactionAmount.text = amount
-        cell?.transactionTime.text = time
+        let transaction = transactions[indexPath.row]
+      
+        cell?.transactionName.text = transaction.transactionNames
+        cell?.transactionLocation.text = transaction.transactionLocation
+        cell?.transactionAmount.text = transaction.transactionAmount
+        cell?.transactionTime.text = transaction.transactionTime
         return cell!
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)

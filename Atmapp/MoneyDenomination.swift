@@ -7,6 +7,6 @@
 //
 
 import Foundation
-class MoneyDenomination{
+struct MoneyDenomination{
      static let moneyDenomination = ["1000","2000","5000","10000","15000","20000","25000","30000","35000", "40000"]
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE065066233EB1ED00166FCA /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE065065233EB1ED00166FCA /* CardView.swift */; };
+		CE18440C2354A606006E3359 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18440B2354A606006E3359 /* Transaction.swift */; };
 		CE2771BC2344B3F1007170D3 /* Verified.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2771BB2344B3F1007170D3 /* Verified.swift */; };
 		CE61CEBB23460F5400A075B9 /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61CEBA23460F5400A075B9 /* Support.swift */; };
 		CE61CEBD234610AE00A075B9 /* SupportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61CEBC234610AE00A075B9 /* SupportTableViewCell.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		CE065065233EB1ED00166FCA /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		CE18440B2354A606006E3359 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		CE2771BB2344B3F1007170D3 /* Verified.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verified.swift; sourceTree = "<group>"; };
 		CE61CEBA23460F5400A075B9 /* Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
 		CE61CEBC234610AE00A075B9 /* SupportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportTableViewCell.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				CE61CEBF234690E100A075B9 /* TransactionDetails.swift */,
+				CE18440B2354A606006E3359 /* Transaction.swift */,
 				CE61CEC3234695A600A075B9 /* CardDetails.swift */,
 				CE61CEC5234776BD00A075B9 /* MoneyDenomination.swift */,
 				CE61CEC723478C0400A075B9 /* SupportList.swift */,
@@ -338,6 +341,7 @@
 				CEA72C11234031660053635D /* Withdrawal.swift in Sources */,
 				CE2771BC2344B3F1007170D3 /* Verified.swift in Sources */,
 				CE61CEBB23460F5400A075B9 /* Support.swift in Sources */,
+				CE18440C2354A606006E3359 /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

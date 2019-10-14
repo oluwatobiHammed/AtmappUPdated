@@ -24,10 +24,7 @@ class Withdrawal: UIViewController {
     @IBOutlet weak var pinTwoTextField: UITextField!
 
 
-   
-    var userEnteredPin: String?
-    let pin = "1111"
-    var remainingAttempts = 3
+    private var remainingAttempts = 3
     let moneyDenomination = MoneyDenomination.moneyDenomination
     let balance = 56379.01
     var selectedAmount: String?
@@ -36,6 +33,7 @@ class Withdrawal: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
         verifyButton.isEnabled = false
         pinOneTextField.delegate = self
         pinOneTextField.keyboardType = .numberPad
@@ -81,45 +79,46 @@ class Withdrawal: UIViewController {
     }
     
     private func voidexecuteLogin() {
-        
-        userEnteredPin = pinOneTextField.text! + pinTwoTextField.text! + pinThreeTextField.text! + pinFourTextField.text!
+        let pin = "1111"
+        let  userEnteredPin = pinOneTextField.text! + pinTwoTextField.text! + pinThreeTextField.text! + pinFourTextField.text!
         if pinFourTextField.text?.utf16.count == 1{
             
             let amount = Double(enterAmount.text!)
-                if  amount == nil {
-                     displayMyAlertMessage(userMessage: "Enter Amount you want to withdrawal")
-                }else{
-                    if (remainingAttempts != 0){
-                         if pin == userEnteredPin && amount! <= balance {
-                           let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                           let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Verified") as! Verified
-                           self.show(nextViewController, sender: self)
-                         
-                        }else{
-                            var msg = " "
-                           
-                           if amount! > balance {
-                                displayMyAlertMessage(userMessage: "The Amount entered have exceeded the balance")
-                            }
-                           else if (remainingAttempts > 0){
-                                msg = "\(remainingAttempts) attempts left."
-                                displayMyAlertMessage(userMessage: "Pin do not match " + msg);
-                                remainingAttempts  = remainingAttempts - 1
-                            }
-                        }
+            if  amount == nil {
+                displayMyAlertMessage(userMessage: "Enter Amount you want to withdrawal")
+            }else{
+                if (remainingAttempts != 0){
+                    if pin == userEnteredPin && amount! <= balance {
+                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Verified") as! Verified
+                        self.show(nextViewController, sender: self)
+                        
                     }else{
-                        displayMyAlertMessage(userMessage: "Your Card Have been permanently retained, please contact your bank")
-                       let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                       let nextViewController = storyBoard.instantiateViewController(withIdentifier: "card") as! CardView
-                                       self.show(nextViewController, sender: self)
+                        var msg = " "
+                        
+                        if amount! > balance {
+                            displayMyAlertMessage(userMessage: "The Amount entered have exceeded the balance")
+                        }
+                        else if (remainingAttempts > 0){
+                            msg = "\(remainingAttempts) attempts left."
+                            displayMyAlertMessage(userMessage: "Pin do not match " + msg);
+                            remainingAttempts  = remainingAttempts - 1
+                        }
                     }
-
+                }else{
+                    displayMyAlertMessage(userMessage: "Your Card Have been permanently retained, please contact your bank")
+                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "card") as! CardView
+                    self.show(nextViewController, sender: self)
+                }
+                
                 
             }
         }
-             
+          
         
     }
+    
     @objc func dissmissKeyBoard() {
         view.endEditing(true)
     }
@@ -132,11 +131,13 @@ class Withdrawal: UIViewController {
         }
     }
 
-    @objc func keyboardWillHide(notification: NSNotification) {
+    @objc func keyboardWillHide(notification: NSNotification)
+    {
         if self.view.frame.origin.y != 0 {
             self.view.frame.origin.y = 0
         }
     }
+    
     
     func displayMyAlertMessage(userMessage:String)
     {
@@ -168,6 +169,7 @@ extension Withdrawal: UIPickerViewDataSource,UIPickerViewDelegate{
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return moneyDenomination.count
     }
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return moneyDenomination[row]
     }
@@ -182,6 +184,7 @@ extension Withdrawal: UIPickerViewDataSource,UIPickerViewDelegate{
 }
 
 extension Withdrawal: UITextFieldDelegate {
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         // Find out what the text field will be after adding the current edit
         let text = (textField.text! as NSString).replacingCharacters(in: range, with: string)
@@ -204,6 +207,7 @@ extension Withdrawal: UITextFieldDelegate {
         if text?.utf16.count == 1 {
           
             switch textField {
+                
             case pinOneTextField:
                  pinTwoTextField.becomeFirstResponder()
             case pinTwoTextField:
@@ -211,8 +215,7 @@ extension Withdrawal: UITextFieldDelegate {
             case pinThreeTextField:
                 pinFourTextField.becomeFirstResponder()
             case pinFourTextField:
-                pinFourTextField.becomeFirstResponder()
-               
+                 pinFourTextField.resignFirstResponder()
             default:
                break
             }

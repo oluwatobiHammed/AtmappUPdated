@@ -7,9 +7,16 @@
 //
 
 import Foundation
-class TransactionDetails {
-    static let transactionNames = ["Withdrawal", "SMS Alert Fee", "Credit","Credit","Withdrawal","SMS Alert Fee","Withdrawal","SMS Alert Fee"]
-   static let transactionLocation = ["Unilag Branch ATM","0000013923413456","MR FOLA AGORO","USMAN UCHENNA.O","IDUMOTA BRANCH ATM","0000013923413452","0000013923413456","0000013923413489"]
-   static  let transactionAmount = ["-20,052","-8.00","+100,000","+20,000","+20,000","-8.00","-8.00","-8.00"]
-   static  let transactionTime = ["1:52AM","2:00AM","5:47PM","2:00PM","12:00PM","11:00AM","1:45PM","4:00PM"]
+
+struct TransactionDetails {
+    static let transaction = [
+        Transaction(names: "Withdrawal", locations: "Unilag Branch ATM", amount: "-20,052", time: "1:52AM"),
+        Transaction(names: "SMS Alert Fee", locations: "0000013923413456", amount: "-8.00", time: "2:00AM"),
+        Transaction(names: "Credit", locations: "MR FOLA AGORO", amount: "+100,000", time: "5:47PM"),
+        Transaction(names: "Credit", locations: "USMAN UCHENNA.O", amount: "+20,000", time: "2:00PM"),
+        Transaction(names:  "Withdrawal", locations: "IDUMOTABRANCHATM", amount: "+20,000", time: "12:00PM"),
+        Transaction(names: "SMS Alert Fee", locations: "0000013923413452", amount: "-8.00", time: "11:00AM"),
+        Transaction(names: "Withdrawal", locations: "0000013923413456", amount: "-8.00", time: "1:45PM"),
+        Transaction(names: "SMS Alert Fee", locations: "0000013923413489", amount: "-8.00", time: "4:00PM")
+    ]
 }
